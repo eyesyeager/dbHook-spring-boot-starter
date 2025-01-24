@@ -1,0 +1,25 @@
+executor:
+  name: animeSync
+  type: cron/fixed
+  cron: 0 0 12 * * ?
+  fixedRate: 1
+
+monitor:
+  jdbc:
+    conn:
+      url: hhh
+      username: hhh
+      password: hhh
+    stateName: id
+    stateDefault: 1
+    stateType: INT
+    stateClearWhenBoot: false
+    judgeSql: select * from table where id > ?
+  redis:
+
+
+handler:
+  name: animeFileSync
+  params:
+    a: 1
+    b: 2

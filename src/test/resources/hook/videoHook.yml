@@ -1,0 +1,18 @@
+executor:
+  name: videoSync
+  type: cron/fixed
+  cron: 0 0 12 * * ?
+  fixedRate: 1s/2min/3h
+
+monitor:
+  stateName: id
+  stateDefault: 1
+  stateType: INT
+  stateClearWhenBoot: false
+  judgeSql: select * from table where id > ?
+
+handler:
+  name: videoFileSync
+  params:
+    - '1'
+    - a
