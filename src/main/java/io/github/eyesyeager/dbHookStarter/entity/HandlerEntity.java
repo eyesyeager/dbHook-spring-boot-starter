@@ -1,4 +1,4 @@
-package io.github.eyesyeager.eyesHookStarter.entity;
+package io.github.eyesyeager.dbHookStarter.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 public class HandlerEntity {
-	private String name;
+	private String beanName;
 
 	private Object params;
 }

@@ -1,4 +1,4 @@
-package io.github.eyesyeager.eyesHookStarter.constants;
+package io.github.eyesyeager.dbHookStarter.constants;
 
 /**
  * @author eyesYeager
@@ -19,5 +19,8 @@ public class ConfigConstants {
 	 *                                    默认配置
 	 *******************************************************************************
 	 */
+
 	public static final String DEFAULT_CONFIG_PATH = "dbHook";
+
+	public static final String DEFAULT_TABLE_NAME = "db_hoot_state";
 }

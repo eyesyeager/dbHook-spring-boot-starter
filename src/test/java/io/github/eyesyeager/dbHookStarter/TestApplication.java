@@ -1,6 +1,6 @@
-package io.github.eyesyeager.eyesHookStarter;
+package io.github.eyesyeager.dbHookStarter;
 
-import io.github.eyesyeager.eyesHookStarter.starter.EyesHookAutoConfiguration;
+import io.github.eyesyeager.dbHookStarter.starter.DbHookAutoConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -9,7 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * data 2025/1/18 16:00
  */
 
-@SpringBootTest(classes = EyesHookAutoConfiguration.class)
+@SpringBootTest(classes = DbHookAutoConfiguration.class)
 public class TestApplication {
 
 	@Test

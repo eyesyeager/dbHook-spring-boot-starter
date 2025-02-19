@@ -1,4 +1,4 @@
-package io.github.eyesyeager.eyesHookStarter.entity;
+package io.github.eyesyeager.dbHookStarter.entity;
 
 import lombok.Data;
 

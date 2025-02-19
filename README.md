@@ -1,2 +1,1 @@
-# eyesHook-spring-boot-starter
-a hook task tool
+# dbHook-spring-boot-starter

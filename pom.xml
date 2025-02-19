@@ -4,12 +4,37 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.eyesyeager</groupId>
-    <artifactId>eyesHook-spring-boot-starter</artifactId>
+    <groupId>io.github.eyesyeager</groupId>
+    <artifactId>dbHook-spring-boot-starter</artifactId>
     <version>1.0.0</version>
-    <name>eyesHook-spring-boot-starter</name>
-    <description>a hook task tool</description>
-    <url>https://github.com/eyesyeager/eyesHook-spring-boot-starter</url>
+    <name>dbHook-spring-boot-starter</name>
+    <description>a db hook task tool</description>
+    <url>https://github.com/eyesyeager/dbHook-spring-boot-starter</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>eyesYeager</id>
+            <name>eyesYeager</name>
+            <email>eyesyeager@gmail.com</email>
+            <roles>
+                <role>Project Manager</role>
+                <role>Architect</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>https://github.com/eyesyeager/dbHook-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:eyesyeager/dbHook-spring-boot-starter.git</developerConnection>
+        <url>https://github.com/eyesyeager/dbHook-spring-boot-starter</url>
+    </scm>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -44,7 +69,7 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
         <dependency>
@@ -59,4 +84,68 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <plugins>
+            <!--   central发布插件    -->
+            <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.4.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>eyesyeager</publishingServerId>
+                    <tokenAuth>true</tokenAuth>
+                </configuration>
+            </plugin>
+            <!--   source源码插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--   javadoc插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <configuration>
+                    <executable>D:\GnuPG\bin\gpg.exe</executable>
+                    <keyname>eyesyeager</keyname>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

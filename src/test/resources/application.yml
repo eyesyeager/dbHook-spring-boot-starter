@@ -1,2 +1,3 @@
 db-hook:
   config-path: dbHook
+  state-table-name: hook_state

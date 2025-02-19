@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.github.eyesyeager.eyesHookStarter.starter.EyesHookAutoConfiguration
+io.github.eyesyeager.dbHookStarter.starter.DbHookAutoConfiguration

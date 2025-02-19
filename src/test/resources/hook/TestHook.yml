@@ -1,0 +1,21 @@
+executor:
+  name: testHook
+  cron: 0 0/1 * * * ?
+
+monitor:
+  judgeSql: select * from test where update_time > ? limit 100
+  #  resultType: field
+  #  resultClass: java.lang.Integer
+  resultType: entity
+  resultClass: com.eyesyeager.eyeshookapp.entity.TestEntity
+  state:
+    enabled: true
+    fieldName: update_time
+    fieldType: datetime
+    defaultValue: 2000-01-01 00:00:00
+
+handler:
+  beanName: testSyncHook
+  params:
+    a: 1
+    b: 2
