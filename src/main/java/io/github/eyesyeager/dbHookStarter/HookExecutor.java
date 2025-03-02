@@ -46,7 +46,7 @@ public class HookExecutor {
 
 	public HookExecutor(HookConfig hookConfig) {
 		this.hookConfig = hookConfig;
-		this.properties = hookConfig.getEyesHookProperties();
+		this.properties = hookConfig.getDbHookProperties();
 		configManager = new ConfigManager(properties, hookConfig.getResourceLoader());
 	}
 

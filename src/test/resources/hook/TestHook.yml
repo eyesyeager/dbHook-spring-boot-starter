@@ -7,7 +7,7 @@ monitor:
   #  resultType: field
   #  resultClass: java.lang.Integer
   resultType: entity
-  resultClass: com.eyesyeager.eyeshookapp.entity.TestEntity
+  resultClass: com.eyesyeager.dbhookapp.entity.TestEntity
   state:
     enabled: true
     fieldName: update_time
