@@ -1,5 +1,9 @@
 package io.github.eyesyeager.dbHookStarter;
 
+import io.github.eyesyeager.dbHookStarter.entity.ExecutorEntity;
+import io.github.eyesyeager.dbHookStarter.entity.HandlerEntity;
+import io.github.eyesyeager.dbHookStarter.entity.MonitorEntity;
+
 import java.util.List;
 
 /**
@@ -10,6 +14,12 @@ import java.util.List;
 public abstract class AbstractHook {
 
     protected Object params;
+
+    protected ExecutorEntity executorEntity;
+
+    protected MonitorEntity monitorEntity;
+
+    protected HandlerEntity handlerEntity;
 
     public abstract void execute(List<Object> result);
 }

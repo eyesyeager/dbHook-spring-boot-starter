@@ -77,7 +77,7 @@ public class HookExecutor {
 					hookEntity.getMonitor(),
 					properties.getStateTableName()
 			);
-			AbstractHook handler = handlerManager.loadHandler(hookConfig.getBeanFactory(), hookEntity.getHandler());
+			AbstractHook handler = handlerManager.loadHandler(hookConfig.getBeanFactory(), hookEntity);
 			beginTask(executor, monitor, handler);
 		}
 	}

@@ -6,7 +6,7 @@
 
     <groupId>io.github.eyesyeager</groupId>
     <artifactId>dbHook-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>dbHook-spring-boot-starter</name>
     <description>a db hook task tool</description>
     <url>https://github.com/eyesyeager/dbHook-spring-boot-starter</url>

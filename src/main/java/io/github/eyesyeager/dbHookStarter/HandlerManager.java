@@ -1,6 +1,7 @@
 package io.github.eyesyeager.dbHookStarter;
 
 import io.github.eyesyeager.dbHookStarter.entity.HandlerEntity;
+import io.github.eyesyeager.dbHookStarter.entity.HookEntity;
 import org.springframework.beans.factory.BeanFactory;
 
 /**
@@ -10,9 +11,14 @@ import org.springframework.beans.factory.BeanFactory;
 
 public class HandlerManager {
 
-    public AbstractHook loadHandler(BeanFactory beanFactory, HandlerEntity entity) {
-        AbstractHook instance = (AbstractHook) beanFactory.getBean(entity.getBeanName());
-        instance.params = entity.getParams();
+    public AbstractHook loadHandler(BeanFactory beanFactory, HookEntity entity) {
+        HandlerEntity handler = entity.getHandler();
+        AbstractHook instance = (AbstractHook) beanFactory.getBean(handler.getBeanName());
+        // 参数赋值
+        instance.executorEntity = entity.getExecutor();
+        instance.monitorEntity = entity.getMonitor();
+        instance.handlerEntity = handler;
+        instance.params = handler.getParams();
         return instance;
     }
 }
