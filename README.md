@@ -18,9 +18,9 @@
 
 ```sql
 -- ----------------------------
--- Table structure for db_hoot_state
+-- Table structure for db_hook_state
 -- ----------------------------
-DROP TABLE IF EXISTS `db_hoot_state`;
+DROP TABLE IF EXISTS `db_hook_state`;
 CREATE TABLE `db_hoot_state`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `executor` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
@@ -38,14 +38,16 @@ CREATE TABLE `db_hoot_state`  (
 ```yml
 db-hook:
   # 自定义 hook 规则配置文件 所处文件夹路径
-  # 默认 dbHook
+  # 不配置则默认 dbHook
   config-path: dbHook
   # 状态表 名字
-  # 默认读取 db_hoot_state
-  state-table-name: hook_state
+  # 不配置则默认读取 db_hook_state
+  state-table-name: db_hook_state
 ```
 
 至此接入完成。
+
+> 环境要求：jdk >= 17
 
 # hook 配置
 

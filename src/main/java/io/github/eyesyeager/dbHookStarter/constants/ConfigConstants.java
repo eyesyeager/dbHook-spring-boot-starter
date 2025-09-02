@@ -22,5 +22,5 @@ public class ConfigConstants {
 
 	public static final String DEFAULT_CONFIG_PATH = "dbHook";
 
-	public static final String DEFAULT_TABLE_NAME = "db_hoot_state";
+	public static final String DEFAULT_TABLE_NAME = "db_hook_state";
 }
